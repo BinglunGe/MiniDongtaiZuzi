@@ -1,0 +1,14 @@
+body{
+	font-family: "New Batang", Fixedsys, SimSun, "Times New Roman", sans-serif;
+}
+.uitStackSnapshot{
+	width: 100%;
+	overflow: auto;
+}
+.uitStackSnapshot td{
+	text-align: left;
+}
+.uitStackSnapshot table{
+	height: 100%;
+	width: 100%;
+}

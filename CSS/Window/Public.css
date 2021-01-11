@@ -1,0 +1,76 @@
+div.queryButton {
+	width: 6em;
+	margin-right: 2em;
+	float: left;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table,
+td,
+th {
+	border: 1px solid black;
+}
+
+
+/*
+*{
+    font-family: Heshengzimu,"MS Mincho", SimSun, "Times New Roman", fixedsys, serif;
+    font-size: 16px;
+
+}*/
+body{
+    /*background: url("../IMG/SHADOW.GIF");*/
+    background-color: gray;
+}
+button{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-align: center;
+    background-color: silver;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.buttonLike{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: silver;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.noneSelect {
+    -webkit-touch-callout: none; /* iOS Safari         */
+    -webkit-user-select: none;  /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror             */
+    -moz-user-select: none;  /* Firefox                */
+    -ms-user-select: none; /* Internet Explorer/Edge   */
+    user-select: none; /* Non-prefixed version, currently
+                        * not supported by any browser */
+}
+
+::-webkit-scrollbar
+{
+    width: 16px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+::-webkit-scrollbar-track
+{
+    background: url("../IMG/SHADOW_SILVER.GIF");
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: silver;
+    background-image: url("../IMG/THUMB.GIF");
+    border: 1px solid black;
+}

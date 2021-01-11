@@ -1,0 +1,78 @@
+.bigButtonInStartWindow{
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    padding: 80px;
+    font-size: 16px;
+}
+.iconOfApplication{
+    float: left;
+    margin: 1em;
+    border: 1px solid black;
+    width: 4em;
+}
+.iconOfApplication > .iconOfApplicationUpIcon,
+.iconOfApplication > .iconOfApplicationDownText{
+    text-align: center;
+    margin: none;
+}
+.clock>div{
+    float: left;
+}
+.ids .inputField{
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 3em);
+}
+.ids .idsInput{
+    width: 100%;
+}
+.ids .idsKeyBoard{
+    float: left;
+}
+div.createButton{
+    float: right;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+.ids .keyInKeyboard{
+    float: left;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin: 1px;
+    /*padding: 1px;*/
+}
+.ids .outField{
+    font-size: 255px;
+}
+.ids .idsIframe{
+    width: 100%;
+    height: 800px;
+}
+.ids .hanziIframe{
+    width: 100%;
+    height: 500px;
+}
+.keyboardIdc{
+    background-image: url("../IMG/IDS/IDC.GIF");
+    background-repeat: no-repeat;
+}
+div.singleInput{
+    border-top: 1px solid black;
+    padding-top: 1px;
+}
+div.unit{
+    float: right;
+    width: 2em;
+    text-align: right;
+}
+.settingInput{
+    border-left: 1px solid black;
+    padding-left: 1px;
+}
+.isLogin{
+    height:22px;
+    width:129px;
+}

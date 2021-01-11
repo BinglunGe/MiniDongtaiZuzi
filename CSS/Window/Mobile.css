@@ -1,0 +1,108 @@
+div.__left{
+	float: left;
+}
+div.__right{
+	float: right;
+}
+div.__shadow{
+	/*background: url("../../IMG/SHADOW.GIF"); */
+	/*background-color: black;*/
+	z-index: -1;
+}/*
+div.__onlyShadow{
+	background: url("../../IMG/SHADOW.GIF"); 
+}*/
+div._window{
+	position:absolute;
+	left: 0px !important;
+	top: 0px;
+	z-index: 0;
+	width: 100% !important;
+}
+div.__window{
+	width: 100%;
+	height: 100%;
+	background-color: silver;
+	color: black;
+	font-size: /*64*/16px;
+	border: 1px solid black;
+}
+div._windowShadow{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 1em;
+	top: 1em;
+}
+div._titleBar{
+	height: 1.5em;
+	line-height: 1.5em;
+	background-color: darkblue;
+	color: white;
+	cursor: default;
+}
+div._window_button{
+	height: 1em;
+	text-align: center;
+	background-color: silver;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+div._window_button_threeButtonsOnTitleBar{
+	color: black;
+	height: 1em;
+	line-height: 1em;
+	width: 1em;
+	margin: 1px;
+	padding: 1px;
+}
+div._contents{
+	float: top;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#_window1,
+#_window1>.__window,
+#_window1>.__window>._contents{
+	width: 2em !important;
+} 
+#windowsManager{
+	width: 100%;
+	height: 100%;
+	overflow-y:scroll;
+	overflow-x: hidden;
+}
+._infomationOfWindow{
+	width: 99%;
+	height: 1.5em;
+	line-height: 1.5em;
+}
+div._zoom{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 1em;
+	height: 1em;
+}
+div.showManager{
+	font-size: 2em;
+	width: 1em;
+	height: 1em;
+	background-color: white;
+}
+
+body, html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+input{
+	height: 6em;
+}/*
+img{
+	transform: scale(6,6);
+}*/

@@ -1,0 +1,68 @@
+{ADD} <+> :
+{SUB} <-> :
+{MUL} <*> :
+{DIV} </> :
+{0 PICK} <DUP> :
+{1 PICK} <OVER> :
+{1 ROLL} <SWAP> :
+{2 ROLL} <ROT> :
+{/*DROP*/} <REM> :
+{DUP .} <..> :
+{0} <TRUE> :
+{-1} <FALSE> :
+{
+	{} IF?THEN,ELSE
+} <IF?THEN> :
+{TRUE SWAP {} IF?THEN,ELSE} <RUN> :
+{
+	{FALSE}
+	{TRUE} IF?THEN,ELSE
+} <NOT> :
+{
+	{
+		{TRUE} {FALSE} IF?THEN,ELSE
+	}
+	{FALSE} IF?THEN,ELSE
+} <AND> :
+{
+	{
+		{FALSE} {TRUE} IF?THEN,ELSE
+	}
+	{
+		{TRUE} {FALSE} IF?THEN,ELSE
+	} IF?THEN,ELSE
+} <OR> :
+{
+	AND NOT
+} <NAND> :
+{
+	OR NOT
+} <NOR> :
+{
+	/*(NOT A AND B) OR (A AND NOT B)*/ REM
+	OVER NOT OVER AMD OVER NOT 2 PICK AND OR ROT DROP DROP
+} <XOR> :
+{
+	XOR NOT
+} <XNOR> :
+{R@} <I> :
+{
+	/*
+		<START> <STEP> <TO> 
+		{<CODE>} FOR,NEXT
+		IN:
+			'START 'STEP 'TO 
+			'...
+				FOR,NEXT
+		OUT:
+			'START >R
+			{I 'TO GREATER? R> 'STEP + >R SWAP}
+			{'...} UNTIL?LOOP
+	*/ REM
+	3 ROLL >R ROT ROT
+	OVER R> SWAP - >R
+	{I} SWAP CON {GREATER?} CON SWAP {R>} SWAP CON {+ >R} CON SWAP CON
+	SWAP
+	UNTIL?LOOP
+	R> DROP
+} <FOR,NEXT> :

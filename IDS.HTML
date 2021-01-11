@@ -1,0 +1,46 @@
+<meta charset="utf-8" />
+<html>
+
+<head>
+	<link rel="preload" href="CSS/FONTS/GUANHUAZENGBU.WOFF" as="font" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" href="CSS/FONTS/GUANHUAZENGBU.TTF" as="font" type="font/ttf" crossorigin="anonymous">
+	<script type="text/javascript" src="JS/JQ.JS"></script>
+	<script type="text/javascript" src="JS/IDS.JS"></script>
+	<script type="text/javascript" src="JS/UNIH.JS"></script>
+	<script type="text/javascript" src="JS/ConvertRule/bujian.js"></script>
+	<link rel="stylesheet" href="CSS/IDS.CSS">
+	<link rel="stylesheet" href="CSS/Fonts.css">
+	<style>
+		p {
+			font-family: 'SimSun';
+			font-size: 255px;
+		}
+	</style>
+	<script>
+		window.addEventListener('message', function (event) {
+			changeIds(event.data);
+		}, false);
+
+		function changeIds(ids) {
+			$("body p").text(ids);
+			console.time("timer");
+			idsInit();
+		}
+
+		function main() {
+			$("body p").text(decodeURI(window.location.search.substr(1)));
+			idsInit();
+		}
+		$(document).ready(function () {
+			doOnLoad();
+			main();
+		});
+	</script>
+</head>
+
+<body>
+	<p>请输入内容！</p>
+	<span style="font-family: Heshengzimu;position: absolute;color: #00000000;">&#xE100;&#xE101;&#xE102;&#xE103;&#xE104;&#xE105;&#xE106;&#xE107;&#xE108;&#xE109;&#xE10A;&#xE10B;&#xE10C;&#xE10D;&#xE10E;&#xE10F;&#xE110;&#xE111;&#xE112;&#xE113;&#xE114;&#xE115;&#xE116;&#xE117;&#xE118;&#xE119;&#xE11A;&#xE11B;&#xE11C;&#xE11D;&#xE11E;&#xE11F;&#xE120;&#xE121;&#xE122;&#xE123;&#xE124;&#xE125;&#xE126;&#xE127;&#xE128;&#xE129;&#xE12A;&#xE12B;&#xE12C;&#xE12D;&#xE12E;&#xE12F;</span>
+</body>
+
+</html>

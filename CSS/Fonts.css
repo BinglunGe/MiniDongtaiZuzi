@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "heshengzimu";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url("../CSS/FONTS/GUANHUAZENGBU.WOFF") format("woff"),
+        url("../CSS/FONTS/GUANHUAZENGBU.TTF") format("truetype");
+}@font-face {
+    font-family: "CDP";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url("../CSS/FONTS/CDP.WOFF") format("woff"),
+        url("../CSS/FONTS/CDP.TTF") format("truetype");
+}

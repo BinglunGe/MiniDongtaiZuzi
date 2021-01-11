@@ -1,0 +1,39 @@
+卷 OFFICE 的文件夹 PATH 列表
+卷序列号为 000002CC 0000:4823
+F:.
+|   APPLST.BAT
+|   APPLST.TSV
+|   TREE.TXT
+|   
++---CLOCK
+|       CLOCK.PNG
+|       CLOCK.SJS
+|       
++---HANZI
+|       HANZI.PNG
+|       HANZI.SJS
+|       
++---HSJZ
+|       HSJZ.PNG
+|       HSJZ.SJS
+|       
++---IDS
+|       IDS.PNG
+|       IDS.SJS
+|       
++---KEYBOARD
+|   |   KEY.GIF
+|   |   KEYBOARD.PNG
+|   |   KEYBOARD.SJS
+|   |   
+|   \---IMG
++---NEWUSER
+|       LANG.INI
+|       METAINF.INI
+|       NEWUSER.JS
+|       NEWUSER.SJS
+|       
+\---SETTING
+        SETTING.PNG
+        SETTING.SJS
+        

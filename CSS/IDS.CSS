@@ -1,0 +1,227 @@
+/*body{
+    font-family: "New Batang";
+    background-color: silver;
+}*/
+ids{
+    display: inline-block;
+    vertical-align: middle;
+}
+.glyph {
+    width: 100%;
+    height: 100%;
+    /*width: 255px;
+    height: 255px;*/
+    /*float: left;*/
+}
+.thumbGlyph{
+    width: 255px;
+    height: 255px;
+}/*
+.add>#ThumbDiv{
+    position: absolute;
+    top:0px;
+    left:0px;
+}*/
+.add>.hanziViewBox{
+    border: 1px solid black;
+    background-color: white;
+    font-size: 255px!important;
+    position: absolute;
+    display: none;
+}
+#idsView{
+    font-size: 255px!important;
+}
+.add>.hanziViewBox>.hanziIds{
+    width: 255px;
+    padding-left: 1px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    font-size: 16px;
+}
+.glyph canvas, .glyph img {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    /*font-smooth: never;*/
+    -webkit-font-smoothing : none;
+}
+.glyph * {
+    margin: 0px;
+    padding: 0px;
+}
+.glyph canvas {
+    position: relative;
+    float: none;
+    top: -100%;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    /*display: none;*/
+    /*box-shadow: 0 0 0 1px green;*/
+}
+.glyph .placeholder{
+    /*border: 1px solid green;*/
+    width: 100%;
+    height: 100%;
+    color: #66CCFF00;
+    font-size: calc( 100% - 1px );
+}
+#Thumb{
+    border: 1px solid red;
+    display: none;
+}/*
+    img{
+        display: none;
+    }
+*/
+.glyph div {
+    overflow: hidden;
+    /*box-shadow: 0 0 0 1px blue;*/
+}
+
+.glyph img {
+    width: 100%;
+    height: 100%;
+}
+
+.glyph .d8{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.glyph .ot{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.glyph .u8{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width:100%;
+}
+.glyph .oo{
+    height: 100%;
+    width:100%;
+}
+.glyph .mo{
+    position: relative;
+    top:-90%;
+    left:10%;
+    width:70%;
+    height:70%;
+}
+.glyph .ldL {
+    width: 100%;
+    height: 100%;
+}
+
+.glyph .lud {
+    position:relative;
+    top: -100%;
+    left: 0%;
+    width: 70%;
+    height: 70%
+}
+
+.glyph .luP {
+    width: 100%;
+    height: 100%;
+}
+
+.glyph .ru7 {
+    width: 100%;
+    height: 100%;
+}
+
+.glyph .ruL {
+    position: relative;
+    top: -100%;
+    left: 30%;
+    width: 70%;
+    height: 70%;
+}
+
+.glyph .rdP {
+    position: relative;
+    top: -45%;
+    left: 30%;
+    width: 70%;
+    height: 45%;
+}
+
+.glyph .rdd {
+    width: 100%;
+    height: 100%;
+}
+
+.glyph .ld7 {
+    position: relative;
+    top: -45%;
+    width: 70%;
+    height: 45%;
+}
+
+.glyph .u3 {
+    height: 30%;
+}
+
+.glyph .udm3 {
+    height: 40%;
+}
+
+.glyph .d3 {
+    height: 30%;
+}
+
+.glyph .l3 {
+    float: left;
+    width: 30%;
+}
+
+.glyph .lrm3 {
+    float: left;
+    width: 40%;
+}
+
+.glyph .r3 {
+    float: left;
+    width: 30%;
+}
+
+
+.glyph .l {
+    float: left;
+    width: 50%;
+}
+
+.glyph .r {
+    float: left;
+    width: 50%;
+}
+
+.glyph .u {
+    height: 50%;
+}
+
+.glyph .d {
+    height: 50%;
+}
+
+.glyph .lt90 {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); 	/* IE 9 */
+    -moz-transform:rotate(90deg); 	/* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari Chrome */
+    -o-transform:rotate(90deg); 	/* Opera */
+}
+.glyph .horizon{
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1); 
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph; /*IE*/
+}
