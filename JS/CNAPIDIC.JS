@@ -83,7 +83,8 @@ Array.prototype.筛选 = function (筛选函数) {
 	return 结果;
 
 }
-function 是数组(对象){
+
+function 是数组(对象) {
 	return Array.isArray(对象);
 }
 const 字位 = new GraphemeSplitter();
@@ -143,6 +144,9 @@ Number.prototype.的几次方 = function (幂数) {
 }
 Number.prototype.的地板函数 = function (数) {
 	return Math.floor(this, 数);
+}
+Number.prototype.是偶数 = function (数) {
+	return this % 2 === 0;
 }
 
 function 含有(对象, 值) {
@@ -204,10 +208,12 @@ function 深拷贝(输入对象 /*对象*/ ) {
 	}
 	return 输出对象
 }
-function 对象的键们(对象){
+
+function 对象的键们(对象) {
 	return Object.keys(对象);
 }
-function 对象的长度(对象){
+
+function 对象的长度(对象) {
 	return 对象的键们(对象).的长度();
 }
 /*

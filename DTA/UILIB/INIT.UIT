@@ -1,29 +1,29 @@
-{ADD} <+> :
-{SUB} <-> :
-{MUL} <*> :
-{DIV} </> :
-{0 PICK} <DUP> :
-{1 PICK} <OVER> :
-{1 ROLL} <SWAP> :
-{2 ROLL} <ROT> :
-{/*DROP*/} <REM> :
-{DUP .} <..> :
-{0} <TRUE> :
-{-1} <FALSE> :
+{ADD} \+ :
+{SUB} \- :
+{MUL} \* :
+{DIV} \/ :
+{0 PICK} \DUP :
+{1 PICK} \OVER :
+{1 ROLL} \SWAP :
+{2 ROLL} \ROT :
+{/*DROP*/} \REM :
+{DUP .} \.. :
+{0} \TRUE :
+{-1} \FALSE :
 {
 	{} IF?THEN,ELSE
-} <IF?THEN> :
-{TRUE SWAP {} IF?THEN,ELSE} <RUN> :
+} \IF?THEN :
+{TRUE SWAP {} IF?THEN,ELSE} \RUN :
 {
 	{FALSE}
 	{TRUE} IF?THEN,ELSE
-} <NOT> :
+} \NOT :
 {
 	{
 		{TRUE} {FALSE} IF?THEN,ELSE
 	}
-	{FALSE} IF?THEN,ELSE
-} <AND> :
+	{DROP FALSE} IF?THEN,ELSE
+} \AND :
 {
 	{
 		{FALSE} {TRUE} IF?THEN,ELSE
@@ -31,21 +31,29 @@
 	{
 		{TRUE} {FALSE} IF?THEN,ELSE
 	} IF?THEN,ELSE
-} <OR> :
+} \OR :
 {
 	AND NOT
-} <NAND> :
+} \NAND :
 {
 	OR NOT
-} <NOR> :
+} \NOR :
 {
 	/*(NOT A AND B) OR (A AND NOT B)*/ REM
-	OVER NOT OVER AMD OVER NOT 2 PICK AND OR ROT DROP DROP
-} <XOR> :
+	OVER NOT OVER AND OVER NOT 3 PICK AND OR ROT ROT DROP DROP
+} \XOR :
 {
 	XOR NOT
-} <XNOR> :
-{R@} <I> :
+} \XNOR :
+{
+	{
+		\TRUE .
+	}
+	{
+		\FALSE .
+	} IF?THEN,ELSE
+} \.B :
+{R@} \I :
 {
 	/*
 		<START> <STEP> <TO> 
@@ -65,4 +73,40 @@
 	SWAP
 	UNTIL?LOOP
 	R> DROP
-} <FOR,NEXT> :
+} \FOR,NEXT :
+
+{
+	/*
+		1 2 ... N-1 N <LENGTH> MEAN
+			IN:
+				1 2 ... N-1 N 'LENGTH MEAN
+			OUT:
+				DUP
+				1 1 'LENGTH 2 - 
+				{+} FOR,NEXT
+				'LENGTH /
+	*/
+	>R 0 1 R@ 2 -
+	{+} FOR,NEXT
+	R> /
+} \MEAN :
+{
+	1 - >R 0 1 R@ {
+		I 2 * PICK
+	} FOR,NEXT
+	0 1 R> {
+		I ROLL
+	} FOR,NEXT
+} \SDUP :
+{
+	DUP 1 + SDUP
+	MEAN SWAP DROP
+} \MEAN' :
+{
+	\RUN' SWAP RUN {} >R
+	{DUP \RUN' EQUAL?}
+	{
+		R> CON >R
+	} UNTIL?LOOP
+	DROP R>
+} \RUN' :
